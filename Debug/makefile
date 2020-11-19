@@ -40,8 +40,8 @@ Tiefsetzsteller.bin \
 all: Tiefsetzsteller.elf secondary-outputs
 
 # Tool invocations
-Tiefsetzsteller.elf: $(OBJS) $(USER_OBJS) /Users/T2/Desktop/Embedded\ C/T2_Projekte/target/Tiefsetzsteller/STM32F303K8TX_FLASH.ld
-	arm-none-eabi-gcc -o "Tiefsetzsteller.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/Users/T2/Desktop/Embedded C/T2_Projekte/target/Tiefsetzsteller/STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tiefsetzsteller.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Tiefsetzsteller.elf: $(OBJS) $(USER_OBJS) /Users/T2/Desktop/Embedded_C/T2_Projekte/target/Tiefsetzsteller/STM32F303K8TX_FLASH.ld
+	arm-none-eabi-gcc -o "Tiefsetzsteller.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/Users/T2/Desktop/Embedded_C/T2_Projekte/target/Tiefsetzsteller/STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tiefsetzsteller.map" -Wl,--gc-sections -static -specs=rdimon.specs -lc -lrdimon --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

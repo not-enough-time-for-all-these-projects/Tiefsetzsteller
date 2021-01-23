@@ -1,0 +1,17 @@
+
+*.o
+*.obj
+*.a
+*.so
+*.so.*
+*.dll
+*.elf
+*.exe
+*.map
+*.list
+*.d
+*.su
+*.bin
+*.bit
+*.hex
+

@@ -1,4 +1,13 @@
 
+.project
+.cproject
+.pydevproject
+.mxproject
+.settings
+.metadata
+/*.cfg
+/*.launch
+
 *.o
 *.obj
 *.a
